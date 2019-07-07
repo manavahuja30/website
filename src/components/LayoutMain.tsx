@@ -1,9 +1,7 @@
-import * as React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react';
 
-interface LayoutMainProps {}
-
-const LayoutMain: React.FC<LayoutMainProps> = ({ children }) => (
+const LayoutMain = ({ children }: PropsWithChildren<{}>): ReactElement => (
   <main>{children}</main>
-)
+);
 
-export default LayoutMain
+export default LayoutMain;

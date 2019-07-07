@@ -1,9 +1,7 @@
-import * as React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react';
 
-interface PageProps {
-  className?: string
-}
+const Page = ({ children }: PropsWithChildren<{}>): ReactElement => (
+  <div>{children}</div>
+);
 
-const Page: React.FC<PageProps> = ({ children }) => <div>{children}</div>
-
-export default Page
+export default Page;

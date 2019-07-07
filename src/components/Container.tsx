@@ -1,9 +1,11 @@
-import * as React from 'react'
+import React, { PropsWithChildren, ReactElement } from 'react';
 
 interface ContainerProps {
-  className?: string
+  className?: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ children }) => <div>{children}</div>
+const Container: React.FC<ContainerProps> = ({
+  children,
+}: PropsWithChildren<{}>): ReactElement => <div>{children}</div>;
 
-export default Container
+export default Container;

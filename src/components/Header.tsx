@@ -1,17 +1,18 @@
-import * as React from 'react'
-import { Link } from 'gatsby'
-import Container from './Container'
+import { Link } from 'gatsby';
+import React, { ReactElement } from 'react';
+
+import Container from './Container';
 
 interface HeaderProps {
-  title: string
+  title: string;
 }
 
-const Header: React.FC<HeaderProps> = ({ title }) => (
+const Header = ({ title }: HeaderProps): ReactElement => (
   <header>
     <Container>
       <Link to="/">{title}</Link>
     </Container>
   </header>
-)
+);
 
-export default Header
+export default Header;
