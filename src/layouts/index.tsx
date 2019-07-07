@@ -1,9 +1,9 @@
+import BootstrapProvider from '@bootstrap-styled/provider';
 import { StaticQuery, graphql } from 'gatsby';
 import 'modern-normalize';
 import React, { PropsWithChildren, ReactElement } from 'react';
 import Helmet from 'react-helmet';
 
-import BootstrapProvider from '@bootstrap-styled/provider';
 import Header from '../components/Header';
 import LayoutMain from '../components/LayoutMain';
 import theme from '../styles/theme';

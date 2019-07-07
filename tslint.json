@@ -22,7 +22,7 @@
           },
           {
             "name": "Vendor modules",
-            "match": "^[a-zA-Z-_]+.*",
+            "match": "^[@a-zA-Z-_]+.*",
             "order": 20
           }
         ]

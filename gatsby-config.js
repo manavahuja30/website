@@ -1,6 +1,7 @@
-'use strict'
+'use strict';
 
 module.exports = {
+  pathPrefix: '/website',
   siteMetadata: {
     title: 'gatsby-starter-typescript-plus',
     description: 'A starter kit for TypeScript-based Gatsby projects with sensible defaults.',
@@ -54,6 +55,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet'
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-styled-components',
   ]
 }
