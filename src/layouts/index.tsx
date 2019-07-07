@@ -3,11 +3,11 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import 'modern-normalize'
-import '../styles/normalize'
 
 import Header from '../components/Header'
-import LayoutRoot from '../components/LayoutRoot'
 import LayoutMain from '../components/LayoutMain'
+import BootstrapProvider from "@bootstrap-styled/provider"
+import theme from '../styles/theme'
 
 interface StaticQueryProps {
   site: {
@@ -32,7 +32,7 @@ const IndexLayout: React.FC = ({ children }) => (
       }
     `}
     render={(data: StaticQueryProps) => (
-      <LayoutRoot>
+      <BootstrapProvider theme={theme}>
         <Helmet
           title={data.site.siteMetadata.title}
           meta={[
@@ -42,7 +42,7 @@ const IndexLayout: React.FC = ({ children }) => (
         />
         <Header title={data.site.siteMetadata.title} />
         <LayoutMain>{children}</LayoutMain>
-      </LayoutRoot>
+      </BootstrapProvider>
     )}
   />
 )

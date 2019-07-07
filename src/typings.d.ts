@@ -13,3 +13,6 @@ declare module '*.module.css' {
   const cssModule: CSSModule
   export = cssModule
 }
+
+declare module '@bootstrap-styled/v4';
+declare module '@bootstrap-styled/provider';
