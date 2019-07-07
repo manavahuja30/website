@@ -1,0 +1,58 @@
+{
+  "extends": [
+    "tslint-config-airbnb",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true,
+    "no-any": true,
+    "import-name": false,
+    "ordered-imports": {
+      "options": {
+        "import-sources-order": "lowercase-last",
+        "named-imports-order": "lowercase-last",
+        "grouped-imports": true,
+        "groups": [
+          {
+            "name": "Node standard modules",
+            "match": "^(assert|buffer|child_process|cluster|crypto|dgram|dns|domain|events|fs|http|https|net|os|path|punnycode|querystring|readline|stream|string_decoder|timers|tls|tty|url|util|v8|vm|zlib)$",
+            "order": 10
+          },
+          {
+            "name": "Vendor modules",
+            "match": "^[a-zA-Z-_]+.*",
+            "order": 20
+          }
+        ]
+      }
+    },
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": false,
+    "typedef": [
+      true,
+      "call-signature",
+      "arrow-call-signature",
+      "parameter",
+      "arrow-parameter",
+      "property-declaration",
+      "member-variable-declaration"
+    ],
+    "variable-name": [
+      true,
+      "check-format",
+      "allow-pascal-case"
+    ]
+  },
+  "jsRules": true,
+  "linterOptions": {
+    "exclude": [
+      "dist/**",
+      "coverage/**"
+    ]
+  },
+  "globals": {
+    "mockPlatform": true
+  }
+}
