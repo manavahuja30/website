@@ -42,7 +42,7 @@ const IndexLayout = ({ children }: PropsWithChildren<{}>): ReactElement => (
             { name: 'keywords', content: data.site.siteMetadata.keywords },
           ]}
         />
-        <Header title={data.site.siteMetadata.title} />
+        <Header />
         <LayoutMain>{children}</LayoutMain>
       </BootstrapProvider>
     )}

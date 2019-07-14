@@ -2,10 +2,10 @@ import React, { ReactElement } from 'react';
 
 import IndexLayout from '../layouts';
 
-const IndexPage = (): ReactElement => (
+const About = (): ReactElement => (
   <IndexLayout>
-    <h1>Acceuil</h1>
+    <h1>About</h1>
   </IndexLayout>
 );
 
-export default IndexPage;
+export default About;

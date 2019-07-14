@@ -1,7 +1,10 @@
+import { Container } from '@bootstrap-styled/v4';
 import React, { PropsWithChildren, ReactElement } from 'react';
 
 const LayoutMain = ({ children }: PropsWithChildren<{}>): ReactElement => (
-  <main>{children}</main>
+  <Container>
+    <main>{children}</main>
+  </Container>
 );
 
 export default LayoutMain;
