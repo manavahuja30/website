@@ -8,7 +8,7 @@ export default {
   $black: '#141115',
 
   // Buttons radius
-  '$border-radius': '2rem', // originally .25
-  '$border-radius-lg': '4rem', // originally .5
-  '$border-radius-sm': '1rem', // originally .2
+  '$btn-border-radius': '2rem', // originally .25
+  '$btn-border-radius-lg': '4rem', // originally .5
+  '$btn-border-radius-sm': '1rem', // originally .2
 };
