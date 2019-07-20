@@ -1,0 +1,6 @@
+@import "~bootstrap/scss/variables";
+
+.carousel-inner {
+  @extend .carousel-inner;
+  border-radius: $border-radius-lg;
+}
