@@ -1,32 +1,31 @@
 import React, { ReactElement } from 'react';
-import { Jumbotron, H1, P, Hr, Button } from '@bootstrap-styled/v4';
+import Button from 'react-bootstrap/Button';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
-import Carousel from '../components/Carousel';
+import PictureCarousel from '../components/PictureCarousel';
 import IndexLayout from '../layouts';
 
 const IndexPage = (): ReactElement => (
   <IndexLayout>
     <Jumbotron>
-      <H1 className="display-3">Hello, world!</H1>
-      <P lead>
+      <h1>Hello, world!</h1>
+      <p>
         This is a simple hero unit, a simple jumbotron-style component for
         calling extra attention to featured content or information.
-      </P>
-      <Hr className="my-4" />
-      <P>
+      </p>
+      <hr />
+      <p>
         It uses utility classes for typography and spacing to space content out
         within the larger container.
-      </P>
-      <P lead>
+      </p>
+      <p>
         <Button color="primary" size="lg" role="button">
           Learn more
         </Button>
-      </P>
+      </p>
     </Jumbotron>
 
-    <Carousel
-      id="carousel1"
-      caption="L'île aux singes"
+    <PictureCarousel
       pictures={[
         require('./__fixtures__/samples/L_ile_aux_singes/1.jpg'),
         require('./__fixtures__/samples/L_ile_aux_singes/2.jpg'),

@@ -1,48 +1,33 @@
-import {
-  Collapse,
-  Container,
-  Nav,
-  NavItem,
-  NavLink,
-  Navbar,
-  NavbarToggler,
-} from '@bootstrap-styled/v4';
 import { Link } from 'gatsby';
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 import { Logo, StyledHeader } from './styledComponents';
 
-const Header = (): ReactElement => {
-  const [isOpen, setOpen] = useState(true);
-  return (
-    <StyledHeader>
-      <Container>
-        <Link to="/">
-          <Logo />
-        </Link>
+const Header = (): ReactElement => (
+  <StyledHeader>
+    <Container>
+      <Link to="/">
+        <Logo />
+      </Link>
 
-        <Navbar color="faded" light toggleable="lg">
-          <div className="d-flex justify-content-between">
-            <NavbarToggler onClick={(): void => setOpen(!isOpen)} />
-          </div>
-          <Collapse navbar isOpen={isOpen}>
-            <Nav navbar className="mr-auto">
-              <NavItem>
-                <Link to="/" activeClassName="active">
-                  <NavLink>Acceuil</NavLink>
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/about" activeClassName="active">
-                  <NavLink>A propos</NavLink>
-                </Link>
-              </NavItem>
-            </Nav>
-          </Collapse>
-        </Navbar>
-      </Container>
-    </StyledHeader>
-  );
-};
+      <Navbar bg="light" expand="lg">
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Link to="/" className="nav-link">
+              Acceuil
+            </Link>
+            <Link to="/about" className="nav-link">
+              A propos
+            </Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    </Container>
+  </StyledHeader>
+);
 
 export default Header;
