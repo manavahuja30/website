@@ -1,12 +1,19 @@
 import React, { ReactElement, useState } from 'react';
 import Carousel, { CarouselProps } from 'react-bootstrap/Carousel';
 
+import { Picture } from './styledComponents';
+
+export type PictureSlide = {
+  url: string;
+  description?: string;
+};
+
 interface Props extends CarouselProps {
-  pictures: string[];
+  pictureSlides: PictureSlide[];
 }
 
 const PictureCarousel = ({
-  pictures,
+  pictureSlides,
   ...carouselProps
 }: Props): ReactElement => {
   const [index, setIndex] = useState(0);
@@ -17,14 +24,19 @@ const PictureCarousel = ({
 
   return (
     <Carousel activeIndex={index} onSelect={handleSelect} {...carouselProps}>
-      {pictures.map(
-        (picture: string, index: number): ReactElement => (
+      {pictureSlides.map(
+        (pictureSlide: PictureSlide, index: number): ReactElement => (
           <Carousel.Item key={index}>
-            <img
-              className="d-block w-100"
-              src={picture}
+            <Picture
+              className="d-block"
+              src={pictureSlide.url}
               alt={`Picture ${index}`}
             />
+            {pictureSlide.description && (
+              <Carousel.Caption>
+                <h3>{pictureSlide.description}</h3>
+              </Carousel.Caption>
+            )}
           </Carousel.Item>
         ),
       )}

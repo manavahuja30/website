@@ -2,7 +2,7 @@ import { graphql } from 'gatsby';
 import React, { ReactElement } from 'react';
 
 import Page from '../components/Page';
-import IndexLayout from '../layouts';
+import MainLayout from '../layouts';
 
 interface PageTemplateProps {
   data: {
@@ -10,10 +10,6 @@ interface PageTemplateProps {
       siteMetadata: {
         title: string;
         description: string;
-        author: {
-          name: string;
-          url: string;
-        };
       };
     };
     markdownRemark: {
@@ -27,13 +23,13 @@ interface PageTemplateProps {
 }
 
 const PageTemplate = ({ data }: PageTemplateProps): ReactElement => (
-  <IndexLayout>
+  <MainLayout>
     <Page>
       <h1>{data.markdownRemark.frontmatter.title}</h1>
       {/* eslint-disable-next-line react/no-danger */}
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </Page>
-  </IndexLayout>
+  </MainLayout>
 );
 
 export default PageTemplate;
@@ -44,10 +40,6 @@ export const query = graphql`
       siteMetadata {
         title
         description
-        author {
-          name
-          url
-        }
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {

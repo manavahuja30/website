@@ -17,7 +17,7 @@ interface StaticQueryProps {
   };
 }
 
-const IndexLayout = ({ children }: PropsWithChildren<{}>): ReactElement => (
+const MainLayout = ({ children }: PropsWithChildren<{}>): ReactElement => (
   <StaticQuery
     query={graphql`
       query IndexLayoutQuery {
@@ -46,6 +46,11 @@ const IndexLayout = ({ children }: PropsWithChildren<{}>): ReactElement => (
                 'https://fonts.googleapis.com/css?family=Open+Sans&display=swap',
               rel: 'stylesheet',
             },
+            {
+              href:
+                '//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css',
+              rel: 'stylesheet',
+            },
           ]}
         />
         <Header />
@@ -55,4 +60,4 @@ const IndexLayout = ({ children }: PropsWithChildren<{}>): ReactElement => (
   />
 );
 
-export default IndexLayout;
+export default MainLayout;

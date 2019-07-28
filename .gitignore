@@ -116,3 +116,6 @@ $RECYCLE.BIN/
 
 # Jetbrains IDEs
 .idea
+
+# GraphQL
+schema.graphql
