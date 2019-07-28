@@ -1,8 +1,8 @@
 import React, { ReactElement } from 'react';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-import PictureCarousel from '../components/PictureCarousel';
 
+import PictureCarousel from '../components/PictureCarousel';
 import MainLayout from '../layouts';
 
 const RealisationsPage = (): ReactElement => (
