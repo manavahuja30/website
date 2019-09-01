@@ -8,9 +8,7 @@ type Props = {
   mailTo: string;
 };
 
-const Contact = ({
-  mailTo = 'momssesystem@gmail.com',
-}: Props): ReactElement => (
+const Contact = ({ mailTo }: Props): ReactElement => (
   <MainLayout>
     <h3>Contactez nous</h3>
     <Form action={`mailto:${mailTo}`} method="post">
